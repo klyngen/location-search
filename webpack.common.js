@@ -1,12 +1,11 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   devServer: {
     historyApiFallback: true,
   },
   mode: "development",
-  entry: "./src/index.ts",
+  entry: "./src/demo.ts",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
@@ -19,7 +18,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css|\.s(c|a)ss$/,
+        test: /\.scss?$/,
         use: ["lit-scss-loader", "sass-loader"],
       },
     ],
@@ -28,9 +27,5 @@ module.exports = {
     extensions: [".ts", ".js"],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      chunksSortMode: "none",
-      template: "src/index.html",
-    }),
   ],
 };

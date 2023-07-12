@@ -4,10 +4,14 @@ const webpack = require("webpack");
 
 module.exports = merge(common, {
   mode: "production",
-  plugins: [
-    new webpack.NormalModuleReplacementPlugin(
-      /^\.\/src\/config\/config.ts/, // src/main.ts
-      "./src/config/config.prod.ts"
-    ),
-  ],
+  target: "web",
+  entry: {
+    index: './src/index.ts'
+  },
+  output: {
+    filename: 'location-search.js',
+    library: 'LocationSearch',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
+  }
 });

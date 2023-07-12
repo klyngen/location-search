@@ -1,0 +1,42 @@
+$shadowParams: 1px 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+@mixin shadow {
+  box-shadow: $shadowParams;
+  -webkit-box-shadow: $shadowParams;
+  -moz-box-shadow: $shadowParams;
+}
+
+mwc-textfield {
+  color: white;
+  width: 100%;
+  --mdc-theme-primary: white;
+}
+
+.search-wrapper {
+  @include shadow;
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 90vw;
+  border-radius: 5px;
+}
+
+#menu {
+  display: block;
+}
+
+:host {
+  --mdc-text-field-fill-color: white;
+  --mdc-text-field-idle-line-color: tranparent;
+  --mdc-text-field-hover-line-color: transparent;
+  --mdc-text-field-outlined-idle-border-color: transparent;
+  --mdc-text-field-ink-color: white;
+  --mdc-text-field-label-ink-color: white;
+  --mdc-text-field-outlined-hover-border-color: rgb(200, 200, 200);
+}
+
+mwc-list-item {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  width: 100%;
+  width: 90vw;
+  box-sizing: border-box;
+}

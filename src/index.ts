@@ -1,1 +1,1 @@
-import "./test.component";
+export * from "./locationSearch/locationSearch.component";
