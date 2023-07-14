@@ -1,13 +1,21 @@
 {
-  "name": "LocationSearch",
-  "version": "2.0.0",
+  "name": "@klingen/location-search",
+  "version": "1.0.4",
   "description": "Location search providing fuzzy search for norwegian locations",
-  "main": "index.ts",
+  "main": "dist/location-search.js",
+  "types": "dist/location-search.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "webpack serve -c webpack.dev.js",
     "build": "webpack -c webpack.prod.js",
     "test": "jest"
   },
+  "private": false,
   "keywords": [
     "Norway",
     "Location"
@@ -22,10 +30,12 @@
     "lit-scss-loader": "^2.0.1",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
+    "terser-webpack-plugin": "^5.3.9",
     "ts-jest": "^29.0.5",
     "ts-lit-plugin": "^1.2.1",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
+    "types-webpack-bundler": "^1.0.2",
     "typescript": "^5.0.2",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
